@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="overflow-x-hidden">
 
 <head>
   <meta charset="utf-8" />
@@ -16,7 +16,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
-<body class="text-gray-800 antialiased">
+<body class="text-gray-800 antialiased overflow-x-hidden">
 
   <!-- Navigation -->
   <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
@@ -37,7 +37,7 @@
         </button>
       </div>
       <!-- Nav Right Side -->
-      <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+      <ul class="lg:flex flex-col lg:flex-row list-none lg:ml-auto hidden" id="example-collapse-navbar">
         <!-- Social Media Button -->
         <li class="flex items-center">
           <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
@@ -84,7 +84,7 @@
       <div class="container relative mx-auto">
         <div class="items-center flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-            <div class="pr-12">
+            <div>
               <h1 class="text-white font-semibold text-5xl" data-aos="fade-up">
                 Welcome your epiphany.
               </h1>
@@ -227,7 +227,7 @@
     <section class="relative py-20">
       <!-- Making Polygon Shape in Background -->
       <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-        style="height: 80px; transform: translateZ(0);" >
+        style="height: 80px; transform: translateZ(0);">
         <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
           version="1.1" viewBox="0 0 2560 100" x="0" y="0">
           <polygon class="text-white fill-current" points="2560 0 2560 100 0 100"></polygon>
@@ -538,7 +538,7 @@
     <section class="relative block py-24 lg:pt-0 bg-gray-900">
       <!-- Container -->
       <div class="container mx-auto px-4">
-        <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+        <div class="flex flex-wrap justify-center lg:-mt-64 -mt-32">
           <div class="w-full lg:w-6/12 px-4">
             <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
               <div class="flex-auto p-5 lg:p-10">
@@ -618,7 +618,7 @@
           </div>
         </div>
         <!-- List Container -->
-        <div class="w-full lg:w-6/12 px-4">
+        <div class="w-full lg:w-6/12 px-4 mt-6">
           <div class="flex flex-wrap items-top mb-6">
             <!-- List 1 -->
             <div class="w-full lg:w-4/12 px-4 ml-auto">
@@ -688,8 +688,10 @@
 <script>
   function toggleNavbar(collapseID) {
     document.getElementById(collapseID).classList.toggle("hidden");
-    document.getElementById(collapseID).classList.toggle("block");
+    document.getElementById(collapseID).classList.add("bg-white");
   }
+
+
 
   AOS.init({
     offset: 120, // offset (in px) from the original trigger point
